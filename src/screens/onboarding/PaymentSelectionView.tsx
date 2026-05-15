@@ -1,6 +1,7 @@
 import React, { useMemo } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, SafeAreaView, StatusBar } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
+import BackHeader from '../../components/ui/BackHeader';
 import { spacing, radius, shadows, AppColors } from '../../theme';
 import { useApp } from '../../context/AppContext';
 
@@ -17,6 +18,7 @@ const PaymentSelectionView = ({ navigation }: { navigation: any }) => {
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar barStyle={isDark ? 'light-content' : 'dark-content'} backgroundColor={colors.card} />
+      <BackHeader onPress={() => navigation.goBack()} />
 
       <View style={styles.content}>
         <Text style={styles.title}>¿Cómo quieres pagar?</Text>

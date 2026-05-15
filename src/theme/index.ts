@@ -74,8 +74,8 @@ export interface AppColors {
 }
 
 export const lightColors: AppColors = {
-  primary: '#FF5A1F',
-  primaryLight: '#FFF0EB',
+  primary: '#0047AB',
+  primaryLight: '#EBF1FF',
   secondary: '#2CB67D',
   warning: '#FFD166',
   error: '#EF4444',
@@ -95,8 +95,8 @@ export const lightColors: AppColors = {
 };
 
 export const darkColors: AppColors = {
-  primary: '#FF5A1F',
-  primaryLight: '#3D1F0F',
+  primary: '#0047AB',
+  primaryLight: '#0A1F3D',
   secondary: '#2CB67D',
   warning: '#FFD166',
   error: '#EF4444',

@@ -4,6 +4,7 @@ import {
   SafeAreaView, StatusBar, KeyboardAvoidingView, Platform,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
+import BackHeader from '../../components/ui/BackHeader';
 import { spacing, radius, shadows, AppColors } from '../../theme';
 import { useApp } from '../../context/AppContext';
 
@@ -26,6 +27,7 @@ const ResetPasswordView = ({ navigation }: { navigation: any }) => {
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar barStyle={isDark ? 'light-content' : 'dark-content'} backgroundColor={colors.card} />
+      <BackHeader onPress={() => navigation.goBack()} />
       <KeyboardAvoidingView style={styles.flex} behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
         <View style={styles.content}>
 

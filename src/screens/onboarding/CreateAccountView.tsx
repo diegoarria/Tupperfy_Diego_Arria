@@ -4,6 +4,7 @@ import {
   ScrollView, SafeAreaView, StatusBar, KeyboardAvoidingView, Platform,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
+import BackHeader from '../../components/ui/BackHeader';
 import DatePicker from '../../components/ui/DatePicker';
 import { spacing, radius, shadows, AppColors } from '../../theme';
 import { useApp } from '../../context/AppContext';
@@ -58,6 +59,7 @@ const CreateAccountView = ({ navigation }: { navigation: any }) => {
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar barStyle={isDark ? 'light-content' : 'dark-content'} backgroundColor={colors.card} />
+      <BackHeader onPress={() => navigation.goBack()} />
       <KeyboardAvoidingView style={{ flex: 1 }} behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
         <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.scroll}>
 
