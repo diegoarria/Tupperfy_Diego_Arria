@@ -49,6 +49,7 @@ export const typography = {
   body: { fontSize: 15, fontWeight: '400', lineHeight: 22 } as TextStyle,
   bodySmall: { fontSize: 13, fontWeight: '400', lineHeight: 18 } as TextStyle,
   caption: { fontSize: 11, fontWeight: '400' } as TextStyle,
+  label: { fontSize: 13, fontWeight: '600' } as TextStyle,
 };
 
 export interface AppColors {
@@ -59,9 +60,13 @@ export interface AppColors {
   error: string;
   success: string;
   background: string;
+  surface: string;
   card: string;
   text: string;
   textLight: string;
+  textSecondary: string;
+  gray300: string;
+  gray400: string;
   gray600: string;
   border: string;
   white: string;
@@ -76,9 +81,13 @@ export const lightColors: AppColors = {
   error: '#EF4444',
   success: '#10B981',
   background: '#F8F7F4',
+  surface: '#F5F5F5',
   card: '#FFFFFF',
   text: '#1A1A1A',
   textLight: '#8E8E93',
+  textSecondary: '#6B7280',
+  gray300: '#D1D5DB',
+  gray400: '#9CA3AF',
   gray600: '#52525B',
   border: '#E5E5EA',
   white: '#FFFFFF',
@@ -93,9 +102,13 @@ export const darkColors: AppColors = {
   error: '#EF4444',
   success: '#10B981',
   background: '#0F0F0F',
+  surface: '#2C2C2E',
   card: '#1C1C1E',
   text: '#F2F2F7',
   textLight: '#8E8E93',
+  textSecondary: '#AEAEB2',
+  gray300: '#48484A',
+  gray400: '#636366',
   gray600: '#AEAEB2',
   border: '#38383A',
   white: '#FFFFFF',
