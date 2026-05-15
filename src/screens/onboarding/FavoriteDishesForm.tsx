@@ -9,36 +9,36 @@ import { spacing, radius, shadows, AppColors } from '../../theme';
 import { useApp } from '../../context/AppContext';
 
 const DISHES = [
-  { name: 'Milanesa de Pollo',        emoji: '🍗' },
-  { name: 'Carne Asada',              emoji: '🥩' },
-  { name: 'Enchiladas',               emoji: '🌮' },
-  { name: 'Tacos',                    emoji: '🌮' },
-  { name: 'Chiles Rellenos',          emoji: '🫑' },
-  { name: 'Pozole',                   emoji: '🍲' },
-  { name: 'Tamales',                  emoji: '🫔' },
-  { name: 'Quesadillas',              emoji: '🧀' },
-  { name: 'Sopes',                    emoji: '🫓' },
-  { name: 'Pasta',                    emoji: '🍝' },
-  { name: 'Pizza Margarita',          emoji: '🍕' },
-  { name: 'Sushi de Salmón',          emoji: '🍣' },
-  { name: 'Hamburguesa con Queso',    emoji: '🍔' },
-  { name: 'Pasta Alfredo',            emoji: '🍝' },
-  { name: 'Paella',                   emoji: '🥘' },
-  { name: 'Curry de Pollo',           emoji: '🍛' },
-  { name: 'Lasaña',                   emoji: '🫕' },
-  { name: 'Filete de Salmón',         emoji: '🐟' },
-  { name: 'Pollo a la Parrilla',      emoji: '🍗' },
-  { name: 'Risotto de Champiñones',   emoji: '🍄' },
-  { name: 'Tostadas de Aguacate',     emoji: '🥑' },
-  { name: 'Sopa de Tomate',           emoji: '🍅' },
-  { name: 'Pad Thai',                 emoji: '🍜' },
-  { name: 'Pescado a la Parrilla',    emoji: '🐠' },
-  { name: 'Fajitas de Res',           emoji: '🌯' },
-  { name: 'Burritos',                 emoji: '🌯' },
-  { name: 'Tarta de Queso',           emoji: '🍰' },
-  { name: 'Bistec con Puré',          emoji: '🥩' },
-  { name: 'Sopa de Lentejas',         emoji: '🍲' },
-  { name: 'Espagueti Boloñesa',       emoji: '🍝' },
+  { name: 'Milanesa de Pollo',        icon: 'restaurant-outline' },
+  { name: 'Carne Asada',              icon: 'restaurant-outline' },
+  { name: 'Enchiladas',               icon: 'restaurant-outline' },
+  { name: 'Tacos',                    icon: 'fast-food-outline' },
+  { name: 'Chiles Rellenos',          icon: 'leaf-outline' },
+  { name: 'Pozole',                   icon: 'cafe-outline' },
+  { name: 'Tamales',                  icon: 'restaurant-outline' },
+  { name: 'Quesadillas',              icon: 'restaurant-outline' },
+  { name: 'Sopes',                    icon: 'restaurant-outline' },
+  { name: 'Pasta',                    icon: 'restaurant-outline' },
+  { name: 'Pizza Margarita',          icon: 'pizza-outline' },
+  { name: 'Sushi de Salmón',          icon: 'fish-outline' },
+  { name: 'Hamburguesa con Queso',    icon: 'fast-food-outline' },
+  { name: 'Pasta Alfredo',            icon: 'restaurant-outline' },
+  { name: 'Paella',                   icon: 'restaurant-outline' },
+  { name: 'Curry de Pollo',           icon: 'restaurant-outline' },
+  { name: 'Lasaña',                   icon: 'restaurant-outline' },
+  { name: 'Filete de Salmón',         icon: 'fish-outline' },
+  { name: 'Pollo a la Parrilla',      icon: 'restaurant-outline' },
+  { name: 'Risotto de Champiñones',   icon: 'leaf-outline' },
+  { name: 'Tostadas de Aguacate',     icon: 'leaf-outline' },
+  { name: 'Sopa de Tomate',           icon: 'cafe-outline' },
+  { name: 'Pad Thai',                 icon: 'restaurant-outline' },
+  { name: 'Pescado a la Parrilla',    icon: 'fish-outline' },
+  { name: 'Fajitas de Res',           icon: 'restaurant-outline' },
+  { name: 'Burritos',                 icon: 'fast-food-outline' },
+  { name: 'Tarta de Queso',           icon: 'cafe-outline' },
+  { name: 'Bistec con Puré',          icon: 'restaurant-outline' },
+  { name: 'Sopa de Lentejas',         icon: 'cafe-outline' },
+  { name: 'Espagueti Boloñesa',       icon: 'restaurant-outline' },
 ];
 
 const FavoriteDishesForm = ({ navigation }: { navigation: any }) => {
@@ -100,7 +100,7 @@ const FavoriteDishesForm = ({ navigation }: { navigation: any }) => {
                 onPress={() => toggle(dish.name)}
                 activeOpacity={0.75}
               >
-                <Text style={styles.chipEmoji}>{dish.emoji}</Text>
+                <Icon name={dish.icon} size={16} color={active ? '#FFFFFF' : colors.primary} />
                 <Text style={[styles.chipText, active && styles.chipTextActive]}>{dish.name}</Text>
                 {active && <Icon name="checkmark" size={14} color="#FFFFFF" />}
               </TouchableOpacity>
@@ -152,7 +152,6 @@ const makeStyles = (colors: AppColors) => StyleSheet.create({
     borderWidth: 1.5, borderColor: colors.border,
   },
   chipActive: { backgroundColor: colors.primary, borderColor: colors.primary },
-  chipEmoji: { fontSize: 15 },
   chipText: { fontSize: 13, fontWeight: '500', color: colors.text },
   chipTextActive: { color: '#FFFFFF', fontWeight: '600' },
   bottomBar: {

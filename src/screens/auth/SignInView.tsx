@@ -1,5 +1,6 @@
 import React, { useMemo } from 'react';
 import { SafeAreaView, StyleSheet, Text, View, Image, TouchableOpacity, StatusBar } from 'react-native';
+import Icon from 'react-native-vector-icons/Ionicons';
 import { spacing, radius, shadows, typography, AppColors } from '../../theme';
 import { useApp } from '../../context/AppContext';
 
@@ -19,7 +20,8 @@ const SignInView = ({ navigation }: { navigation: any }) => {
         />
         <Text style={styles.tagline}>Tranqui, dejale tus tuppers a Tupperfy</Text>
         <View style={styles.badge}>
-          <Text style={styles.badgeText}>🍽️  Comida casera a domicilio</Text>
+          <Icon name="restaurant-outline" size={14} color={colors.primary} />
+          <Text style={styles.badgeText}>Comida casera a domicilio</Text>
         </View>
       </View>
 
@@ -55,6 +57,7 @@ const makeStyles = (colors: AppColors) => StyleSheet.create({
     fontWeight: '400', lineHeight: 26, marginBottom: spacing.lg,
   },
   badge: {
+    flexDirection: 'row', alignItems: 'center', gap: 6,
     backgroundColor: colors.primaryLight, borderRadius: radius.full,
     paddingHorizontal: spacing.md, paddingVertical: spacing.xs,
   },
